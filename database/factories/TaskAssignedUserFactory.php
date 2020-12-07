@@ -2,19 +2,20 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
+use App\Models\TaskAssignedUser;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Hash;
+use \App\Models\User;
+use \App\Models\Task;
 
-class UserFactory extends Factory
+
+class TaskAssignedUserFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = User::class;
+    protected $model = TaskAssignedUser::class;
 
     /**
      * Define the model's default state.
@@ -24,9 +25,8 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
-            'email' => $this->faker->unique()->safeEmail,
-            'password' => Hash::make($this->faker->password)
+            'task_id' => Task::factory(),
+            'user_id' => User::factory()
         ];
     }
 }
