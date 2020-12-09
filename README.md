@@ -7,5 +7,3 @@ Kanban Board Laravel Backend
 - Make your database configurations (in .env file)
 - Run "php artisan migrate: refresh --seed" code from terminal to project file
 - You can now test endpoints
-
-Good luck with :)
