@@ -17,7 +17,7 @@ class CreateTasksTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->bigInteger('order');
+            $table->bigInteger('order')->nullable();
             $table->string('priority');
             $table->timestamp('deadline')->nullable();
             $table->integer('task_state_id')->nullable();

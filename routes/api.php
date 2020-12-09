@@ -18,5 +18,5 @@ Route::resource('tasks', 'App\Http\Controllers\TaskController');
 
 Route::resource('task-states', 'App\Http\Controllers\TaskStateController');
 
-Route::resource('users', 'App\Http\Controllers\UserController');
+Route::resource('users', 'App\Http\Controllers\UserController')->only(['index', 'show']);
 
