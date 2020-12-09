@@ -77,13 +77,3 @@ class TaskController extends Controller
         ]);
     }
 }
-
-
-// Action  Route Name
-// GET           /users                      index   users.index
-// GET           /users/create               create  users.create
-// POST          /users                      store   users.store
-// GET           /users/{user}               show    users.show
-// GET           /users/{user}/edit          edit    users.edit
-// PUT|PATCH     /users/{user}               update  users.update
-// DELETE        /users/{user}               destroy users.destroy
